@@ -1,22 +1,37 @@
 package com.example.project71123
 
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import android.view.View
-import android.widget.Button
+import TableButtonAdapter
 import android.content.Intent
+import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), TableButtonAdapter.OnTableItemClickListener {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //Button Click start HelloActivity
-        val button = findViewById<Button>(R.id.button)
-        button.setOnClickListener {
+        val tableList = listOf(
+            Table("Table 1"),
+            Table("Table 2"),
+            Table("Table 3") ,
+            Table("Table 4")
+        )
 
-            val intent = Intent(this@MainActivity, HelloActivity::class.java)
-            startActivity(intent)
-        }
+        val recyclerView: RecyclerView = findViewById(R.id.rvtablelist)
+
+        val adapter = TableButtonAdapter(this, tableList)
+        adapter.tableItemClickListener = this
+
+        recyclerView.layoutManager = LinearLayoutManager(this)
+        recyclerView.adapter = adapter
+    }
+
+    override fun onTableItemClick(table: Table) {
+        val intent = Intent(this, HelloActivity::class.java)
+        intent.putExtra("tableName", table.tableName)
+        startActivity(intent)
     }
 }

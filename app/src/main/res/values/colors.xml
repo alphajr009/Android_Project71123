@@ -7,6 +7,11 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#fafafa</color>
-    <color name="bg_main">#18171C</color>
+    <color name="bg_main">#050000</color>
+
+<!--    Table Btn Colors-->
+    <color name="btn_green">#5dc837</color>
+    <color name="btn_white">#fafafa</color>
+    <color name="btn_red">#ef4135</color>
 
 </resources>
