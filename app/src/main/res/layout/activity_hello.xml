@@ -6,33 +6,73 @@
     android:layout_height="match_parent"
     tools:context=".HelloActivity">
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="126dp"
-        android:layout_height="24dp"
-        android:text="Welcome!"
-        android:textAlignment="center"
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/messageToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/messageActualToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:navigationIcon="@drawable/baseline_arrow_back_ios_24"
+            app:title="Table 1"
+            app:titleCentered="true"
+            app:titleTextColor="@color/white" />
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvtablelist"
+        android:layout_width="412dp"
+        android:layout_height="563dp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/messageToolbar"
+        app:layout_constraintVertical_bias="0.454"
+         />
+
+    <EditText
+        android:id="@+id/editTextMessageInput"
+        android:layout_width="295dp"
+        android:layout_height="48dp"
+        android:background="@drawable/custom_input_message"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:paddingLeft="8dp"
+        android:paddingTop="6dp"
+        android:paddingRight="6dp"
+        android:paddingBottom="6dp"
         android:textColor="@color/white"
-        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintHorizontal_bias="0.326"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.565" />
+        app:layout_constraintVertical_bias="0.957" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="126dp"
-        android:layout_height="wrap_content"
-        android:text="Hello"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="44sp"
-        android:textStyle="bold"
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="5dp"
+        android:background="@drawable/custom_button"
+        android:padding="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.957"
+        app:srcCompat="@drawable/baseline_send_24" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

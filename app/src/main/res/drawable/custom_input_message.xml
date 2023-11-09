@@ -1,0 +1,17 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Border shape -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#1fdf64" />
+            <corners android:radius="24dp" />
+        </shape>
+    </item>
+
+    <!-- Background shape (inset to create the grey area) -->
+    <item android:left="2dp" android:right="2dp" android:top="2dp" android:bottom="2dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#181617" />
+            <corners android:radius="24dp" />
+        </shape>
+    </item>
+</layer-list>
