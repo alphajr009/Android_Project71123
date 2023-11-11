@@ -32,8 +32,8 @@
 
         <TextView
             android:id="@+id/textView8"
-            android:layout_width="39dp"
-            android:layout_height="35dp"
+            android:layout_width="38dp"
+            android:layout_height="37dp"
             android:background="@drawable/circle_bg"
             android:text="1"
             android:textAlignment="center"
@@ -88,40 +88,6 @@
         app:layout_constraintHorizontal_bias="0.932"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/editTextMessageInput"
-        android:layout_width="295dp"
-        android:layout_height="48dp"
-        android:background="@drawable/custom_input_message"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:paddingLeft="8dp"
-        android:paddingTop="6dp"
-        android:paddingRight="6dp"
-        android:paddingBottom="6dp"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.326"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.957" />
-
-    <ImageButton
-        android:id="@+id/imageButton2"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="20dp"
-        android:background="@drawable/custom_button"
-        android:padding="100dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/editTextMessageInput"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.957"
-        app:srcCompat="@drawable/baseline_send_24" />
 
     <TextView
         android:id="@+id/textView7"
